@@ -1,12 +1,14 @@
 import { motion } from "framer-motion";
-import { img1, img2, img3, img4 } from "../../assets";
+import { img, img1, img2, img3, img4 } from "../../assets";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 // Portfolio data with categories
 const portfolioData = [
   {
     id: 1,
     title: "Todo",
+    link: "https://yeasinweb.vercel.app",
     description:
       "With supporting text below as a natural lead-in to additional content.",
     tech: ["Next js", "Redux"],
@@ -17,6 +19,7 @@ const portfolioData = [
   {
     id: 2,
     title: "Car-Doctor",
+    link: "https://yeasinweb.vercel.app",
     description:
       "With supporting text below as a natural lead-in to additional content.",
     tech: ["React.js", "Mongodb", "Node.js", "Firebase"],
@@ -27,6 +30,7 @@ const portfolioData = [
   {
     id: 3,
     title: "Job-Portal",
+    link: "https://yeasinweb.vercel.app",
     description:
       "With supporting text below as a natural lead-in to additional content.",
     tech: ["React.js", "Mongodb", "Node.js", "Firebase"],
@@ -37,6 +41,7 @@ const portfolioData = [
   {
     id: 4,
     title: "Doctor-Appointment",
+    link: "https://yeasinweb.vercel.app",
     description:
       "With supporting text below as a natural lead-in to additional content.",
     tech: ["React.js", "Mongodb", "Node.js", "Firebase"],
@@ -46,7 +51,37 @@ const portfolioData = [
   },
   {
     id: 5,
+    title: "Portfolio",
+    link: "https://yeasinweb.vercel.app",
+    description:
+      "With supporting text below as a natural lead-in to additional content.",
+    tech: [
+      "React.js",
+      "React Scroll",
+      "Framer motion",
+      "tsparticles",
+      "Marquee",
+      "type writter",
+    ],
+    link: "https://yeasinweb.vercel.app/",
+    category: "Design",
+    img: img,
+  },
+  {
+    id: 5,
     title: "Travel-Agency",
+    link: "https://yeasinweb.vercel.app",
+    description:
+      "With supporting text below as a natural lead-in to additional content.",
+    tech: ["React.js", "Mongodb", "Node.js", "Firebase"],
+    link: "https://festive-vacation.surge.sh/",
+    category: "Design",
+    img: img4,
+  },
+  {
+    id: 5,
+    title: "Travel-Agency",
+    link: "https://yeasinweb.vercel.app",
     description:
       "With supporting text below as a natural lead-in to additional content.",
     tech: ["React.js", "Mongodb", "Node.js", "Firebase"],
@@ -57,6 +92,7 @@ const portfolioData = [
   {
     id: 6,
     title: "Match-Box",
+    link: "https://yeasinweb.vercel.app",
     description:
       "With supporting text below as a natural lead-in to additional content.",
     tech: ["React.js", "Mongodb", "Node.js", "Firebase"],
@@ -124,10 +160,11 @@ const OtherSection = () => {
                 whileHover={{ y: -80 }}
                 transition={{ duration: 1 }}
               />
+
               <div className="absolute inset-0  opacity-0 group-hover:opacity-50 transition-opacity duration-300" />
             </div>
             <div className="flex-grow mt-4">
-              <h3 className="text-lg font-bold text-[#333] mb-2">
+              <h3 className="text-lg font-bold text-lightText mb-2">
                 {project.title}
               </h3>
               <ul className="flex text-start flex-wrap text-xs font-medium">

@@ -8,9 +8,11 @@ import people from "./image/peoplentech.png";
 import progranning from "./image/company.png";
 import habiganj from "./image/habiganj.jpg";
 import pdf from "./image/shahin.pdf";
+import img from "./image/portfolio1.png";
 export {
   yeasin,
   logo,
+  img,
   img1,
   img2,
   img3,
