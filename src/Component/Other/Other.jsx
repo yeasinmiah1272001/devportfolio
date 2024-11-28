@@ -1,56 +1,26 @@
 import { motion } from "framer-motion";
-import { img, img1, img2, img3, img4 } from "../../assets";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import {
+  frontend1,
+  frontend2,
+  frontend3,
+  frontend4,
+  frontend5,
+  frontend6,
+  fullstack1,
+  fullstack2,
+  otherImg1,
+  otherImg2,
+  otherImg3,
+  otherImg4,
+  otherImg5,
+  otherImg6,
+} from "../../assets";
 
 // Portfolio data with categories
 const portfolioData = [
   {
     id: 1,
-    title: "Todo",
-    link: "https://yeasinweb.vercel.app",
-    description:
-      "With supporting text below as a natural lead-in to additional content.",
-    tech: ["Next js", "Redux"],
-    link: "https://todo-form-ten.vercel.app",
-    category: "Frontend",
-    img: img1,
-  },
-  {
-    id: 2,
-    title: "Car-Doctor",
-    link: "https://yeasinweb.vercel.app",
-    description:
-      "With supporting text below as a natural lead-in to additional content.",
-    tech: ["React.js", "Mongodb", "Node.js", "Firebase"],
-    link: "https://car-doctor-practice-9032d.web.app/",
-    category: "Frontend",
-    img: img2,
-  },
-  {
-    id: 3,
-    title: "Job-Portal",
-    link: "https://yeasinweb.vercel.app",
-    description:
-      "With supporting text below as a natural lead-in to additional content.",
-    tech: ["React.js", "Mongodb", "Node.js", "Firebase"],
-    link: "https://vast-science.surge.sh/",
-    category: "Full Stack",
-    img: img3,
-  },
-  {
-    id: 4,
-    title: "Doctor-Appointment",
-    link: "https://yeasinweb.vercel.app",
-    description:
-      "With supporting text below as a natural lead-in to additional content.",
-    tech: ["React.js", "Mongodb", "Node.js", "Firebase"],
-    link: "https://medisure-healthcare.web.app/",
-    category: "Full Stack",
-    img: img4,
-  },
-  {
-    id: 5,
     title: "Portfolio",
     link: "https://yeasinweb.vercel.app",
     description:
@@ -63,44 +33,246 @@ const portfolioData = [
       "Marquee",
       "type writter",
     ],
-    link: "https://yeasinweb.vercel.app/",
     category: "Design",
-    img: img,
+    img: otherImg1,
+  },
+  {
+    id: 2,
+    title: "Store House",
+    link: "https://65929af45e2c05aed0fdfd40--legendary-taiyaki-a3fbb8.netlify.app/",
+    description:
+      "With supporting text below as a natural lead-in to additional content.",
+    tech: ["React.js", "React Scroll", "Framer motion", "Deisy ui"],
+    category: "Design",
+    img: otherImg2,
+  },
+  {
+    id: 3,
+    title: "LandingPage",
+    link: "https://react-landing-page-template-93ne.vercel.app/",
+    description:
+      "With supporting text below as a natural lead-in to additional content.",
+    tech: ["React.js", "React Scroll", "Framer motion", "Deisy ui", "emailjs"],
+    category: "Design",
+    img: otherImg3,
+  },
+  {
+    id: 4,
+    title: "Doctor Apponintment",
+    link: "https://romaletodiani.github.io/Hospital-Website/",
+    description:
+      "With supporting text below as a natural lead-in to additional content.",
+    tech: ["Next js", "React Scroll", "Framer motion", "Deisy ui", "emailjs"],
+    category: "Design",
+    img: otherImg4,
   },
   {
     id: 5,
-    title: "Travel-Agency",
-    link: "https://yeasinweb.vercel.app",
+    title: "Arc",
+    link: "https://hbsales.onrender.com/",
     description:
       "With supporting text below as a natural lead-in to additional content.",
-    tech: ["React.js", "Mongodb", "Node.js", "Firebase"],
-    link: "https://festive-vacation.surge.sh/",
+    tech: ["React Js", "React Scroll", "Framer motion", "Deisy ui", "emailjs"],
     category: "Design",
-    img: img4,
-  },
-  {
-    id: 5,
-    title: "Travel-Agency",
-    link: "https://yeasinweb.vercel.app",
-    description:
-      "With supporting text below as a natural lead-in to additional content.",
-    tech: ["React.js", "Mongodb", "Node.js", "Firebase"],
-    link: "https://festive-vacation.surge.sh/",
-    category: "Design",
-    img: img4,
+    img: otherImg5,
   },
   {
     id: 6,
-    title: "Match-Box",
-    link: "https://yeasinweb.vercel.app",
+    title: "Portfolio2",
+    link: "https://yeasinportfolio.vercel.app/",
     description:
       "With supporting text below as a natural lead-in to additional content.",
-    tech: ["React.js", "Mongodb", "Node.js", "Firebase"],
-    link: "https://thundering-competition.surge.sh/",
+    tech: [
+      "React.js",
+      "React Scroll",
+      "Framer motion",
+      "tsparticles",
+      "Marquee",
+      "type writter",
+    ],
     category: "Design",
-    img: img4,
+    img: otherImg6,
   },
-  // Add more projects as needed
+  {
+    id: 7,
+    title: "Ecommarce-Shofy",
+    link: "https://shofyproject.vercel.app/",
+    description:
+      "With supporting text below as a natural lead-in to additional content.",
+    tech: [
+      "Next Js",
+      "Typescript",
+      "Next Auth",
+      "Stript js",
+      "Redux Tolkit",
+      "Redux Persist",
+      "Framer motion",
+      "Marquee",
+    ],
+    category: "Frontend",
+    img: frontend1,
+  },
+  {
+    id: 8,
+    title: "Ecommarce-Shopping",
+    link: "eid-shopping.vercel.app",
+    description:
+      "With supporting text below as a natural lead-in to additional content.",
+    tech: [
+      "Next Js",
+      "Stript js",
+      "Next Auth",
+      "Redux Tolkit",
+      "Redux Persist",
+      "Framer motion",
+      "Marquee",
+    ],
+    category: "Frontend",
+    img: frontend2,
+  },
+  {
+    id: 9,
+    title: "Ecommarce-Smartyt",
+    link: "https://e-commarce-smartyt.vercel.app",
+    description:
+      "With supporting text below as a natural lead-in to additional content.",
+    tech: [
+      "Next Js",
+      "Typescript",
+      "Stript js",
+      "Next Auth",
+      "Redux Tolkit",
+      "Redux Persist",
+      "Framer motion",
+      "Marquee",
+    ],
+    category: "Frontend",
+    img: frontend3,
+  },
+  {
+    id: 10,
+    title: "Book-Store",
+    link: "https://book-client-five.vercel.app/",
+    description:
+      "With supporting text below as a natural lead-in to additional content.",
+    tech: [
+      "React Js",
+      "Stript js",
+      "Firebase",
+      "Mongodb",
+      "Node js",
+      "Express js",
+    ],
+    category: "Frontend",
+    img: frontend4,
+  },
+  {
+    id: 11,
+    title: "Fashion-Ecommarce",
+    link: "https://fashion-client-iota.vercel.app",
+    description:
+      "With supporting text below as a natural lead-in to additional content.",
+    tech: [
+      "React Js",
+      "Stript js",
+      "Firebase",
+      "Mongodb",
+      "Node js",
+      "Express js",
+    ],
+    category: "Frontend",
+    img: frontend5,
+  },
+  {
+    id: 12,
+    title: "Travel-Blog",
+    link: "travel-blog-eight-orpin.vercel.app",
+    description:
+      "With supporting text below as a natural lead-in to additional content.",
+    tech: [
+      "React Js",
+      "Stript js",
+      "Firebase",
+      "Mongodb",
+      "Node js",
+      "Express js",
+    ],
+    category: "Frontend",
+    img: frontend6,
+  },
+  {
+    id: 13,
+    title: "Orabi-Ecommarce",
+    link: "",
+    description:
+      "With supporting text below as a natural lead-in to additional content.",
+    tech: [
+      "React Js",
+      "Stript js",
+      "Mongoose",
+      "Redux Tolkit",
+      "Redux-Persist",
+      "Node js",
+      "Express js",
+    ],
+    category: "Full Stack",
+    img: fullstack1,
+  },
+  {
+    id: 14,
+    title: "Supper-shop",
+    link: "",
+    description:
+      "With supporting text below as a natural lead-in to additional content.",
+    tech: [
+      "React Js",
+      "Stript js",
+      "Mongoose",
+      "Redux Tolkit",
+      "Redux-Persist",
+      "Node js",
+      "Express js",
+    ],
+    category: "Full Stack",
+    img: fullstack2,
+  },
+  {
+    id: 15,
+    title: "Ecommarce-Shofy",
+    link: "https://shofyproject.vercel.app/",
+    description:
+      "With supporting text below as a natural lead-in to additional content.",
+    tech: [
+      "Next Js",
+      "Typescript",
+      "Next Auth",
+      "Stript js",
+      "Redux Tolkit",
+      "Redux Persist",
+      "Framer motion",
+      "Marquee",
+    ],
+    category: "Full Stack",
+    img: frontend1,
+  },
+  {
+    id: 8,
+    title: "Ecommarce-Shopping",
+    link: "eid-shopping.vercel.app",
+    description:
+      "With supporting text below as a natural lead-in to additional content.",
+    tech: [
+      "Next Js",
+      "Stript js",
+      "Next Auth",
+      "Redux Tolkit",
+      "Redux Persist",
+      "Framer motion",
+      "Marquee",
+    ],
+    category: "Full Stack",
+    img: frontend2,
+  },
 ];
 
 const OtherSection = () => {
@@ -187,7 +359,7 @@ const OtherSection = () => {
         <div className="flex justify-center mt-8">
           <button
             onClick={() => setShowAll(true)}
-            className="px-6 py-2 bg-btnColor text-white rounded-lg text-lg font-semibold"
+            className="px-6 py-2 bg-btnColor text-white border border-1 border-designColor rounded-lg text-lg font-semibold"
           >
             Show All
           </button>

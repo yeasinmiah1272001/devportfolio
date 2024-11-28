@@ -3,15 +3,16 @@ import { motion } from "framer-motion";
 import { useRef, useState } from "react";
 import { MdOutlineClose } from "react-icons/md";
 import SocialLinks from "../Link/Link"; // Assuming this is the correct import for social links
-import resume from "../../assets/image/shahin.pdf"; // Ensure this is the correct path to your PDF
-import { logo } from "../../assets";
+
+import { logo, yeasincv } from "../../assets";
 
 const navLink = [
   { title: "Home", path: "home", value: "" },
   { title: "About", path: "about", delay: 0.1 },
-  { title: "Education", path: "education", delay: 0.2 },
   { title: "Skills", path: "skills", delay: 0.3 },
   { title: "Projects", path: "projects", delay: 0.4 },
+  { title: "Education", path: "education", delay: 0.2 },
+
   { title: "Contact", path: "email", delay: 0.5 },
 ];
 
@@ -63,8 +64,8 @@ const Header = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
-            href={resume} // Correct href for the resume download
-            download="resume.pdf" // Sets the download name
+            href={yeasincv} // Correct href for the resume download
+            download="yeasin.pdf" // Sets the download name
             target="_blank" // Optional: Opens in new tab
             className="lg:px-8 lg:py-2 px-4 py-1 rounded-md font-medium text-designColor lg:text-[16px] tracking-wider uppercase border border-designColor hover:bg-hoverColor duration-200"
           >

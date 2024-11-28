@@ -12,7 +12,7 @@ const Email = () => {
   }, []);
 
   return (
-    <div id="contact" className="text-lightText py-14 ">
+    <div id="email" className="text-lightText py-14 ">
       <h1
         className="text-center text-3xl md:text-4xl font-bold text-gray-300 mb-10"
         data-aos="fade-up"

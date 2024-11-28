@@ -1,104 +1,162 @@
-import { img1, img2, img3, img4 } from "../../assets";
+import { fullstack1, fullstack2, img1, img2 } from "../../assets";
 import { motion } from "framer-motion";
+
 const Projects = () => {
   const project = [
+    {
+      img: fullstack1,
+      title: "Orabi-Ecommerce",
+      tech: [
+        "React Js",
+        "Stripe Js",
+        "Mongoose",
+        "Redux Toolkit",
+        "Redux-Persist",
+        "Node Js",
+        "Express Js",
+      ],
+      ClientLiveLink: "https://github.com/yeasinmiah1272001/orabi-fullstack",
+      ServerLiveLink: "https://github.com/yeasinmiah1272001/orabi-fullstack",
+      ClientGithubLink: "https://github.com/yeasinmiah1272001/orabi-fullstack",
+      ServerGithubLink: "https://github.com/yeasinmiah1272001/orabi-fullstack",
+    },
+    {
+      img: fullstack2,
+      title: "E-Commerce-Suppershop",
+      tech: [
+        "React Js",
+        "Stripe Js",
+        "Mongoose",
+        "Redux Toolkit",
+        "Redux-Persist",
+        "Node Js",
+        "Express Js",
+      ],
+      ClientLiveLink: "https://github.com/yeasinmiah1272001/mern-suppershop",
+      ServerLiveLink: "https://github.com/yeasinmiah1272001/mern-suppershop",
+      ClientGithubLink: "https://github.com/yeasinmiah1272001/mern-suppershop",
+      ServerGithubLink: "https://github.com/yeasinmiah1272001/mern-suppershop",
+    },
     {
       img: img1,
       title: "E-Commerce-Shofy",
       tech: ["Next.js", "TypeScript", "Redux", "Next Auth"],
-      liveLink: "https://shofyproject.vercel.app",
-      githubLink: "https://github.com/yeasinmiah1272001/shofy-practice-main",
+      ClientLiveLink: "https://shofyproject.vercel.app",
+      ClientGithubLink:
+        "https://github.com/yeasinmiah1272001/shofy-practice-main",
     },
     {
       img: img2,
       title: "E-Commerce-Shopping",
       tech: ["Next.js", "REST API", "Redux", "Next Auth"],
-      liveLink: "https://eid-shopping.vercel.app",
-      githubLink: "https://github.com/yeasinmiah1272001/eid-shopping",
-    },
-    {
-      img: img3,
-      title: "E-Commerce-Smartyt",
-      tech: ["Next.js", "TypeScript", "Redux", "Next Auth"],
-      liveLink: "https://e-commarce-smartyt.vercel.app",
-      githubLink: "https://github.com/yeasinmiah1272001/e-commarceSmartyt",
-    },
-    {
-      img: img4,
-      title: "Book Store",
-      tech: ["React.js", "MongoDB", "Firebase", "Express"],
-      liveLink: "https://book-client-five.vercel.app/",
-      githubLink:
-        "https://github.com/yeasinmiah1272001/backend/tree/main/Book-store",
+      ClientLiveLink: "https://eid-shopping.vercel.app",
+      ClientGithubLink: "https://github.com/yeasinmiah1272001/eid-shopping",
     },
   ];
 
   return (
-    <div id="projects" className=" text-lg md:px-10 px-4 space-y-6 lg:mx-20">
-      <div className="w-full mx-auto">
-        <div className="text-center my-10 space-y-2">
-          <motion.h1 className="text-4xl">My Projects</motion.h1>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {project.map((project, index) => (
-            <motion.div
-              key={index}
-              className="flex flex-col w-full border border-designColor p-5 shadow-2xl rounded-lg transition duration-500 h-full"
-            >
-              <div className="overflow-hidden  rounded-t-lg h-60 group">
-                <motion.img
-                  src={project.img}
-                  alt={project.title}
-                  className="w-full h-80 object-cover object-top rounded-t-2xl hover:scale-95"
-                  initial={{ y: 0 }}
-                  whileHover={{ y: -80 }}
-                  transition={{ duration: 1 }}
-                />
-              </div>
-              <div className="flex-grow mt-4">
-                <h3 className="text-sm font-bold text-lightText mb-2">
+    <div id="projects" className="px-4 md:px-10 lg:mx-20 space-y-14 lg:mt-10">
+      {/* Header */}
+      <div className="text-center space-y-4">
+        <motion.h1
+          className="text-4xl font-bold text-designColor"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          My Projects
+        </motion.h1>
+        <p className="text-lightText text-sm">
+          Explore some of my recent projects showcasing full-stack and frontend
+          development.
+        </p>
+      </div>
+
+      {/* Projects List */}
+      <div className="space-y-8">
+        {project.map((project, index) => (
+          <motion.div
+            key={index}
+            className="flex flex-col md:flex-row bg-gradient-to-b text-lightText  border border-1 border-designColor rounded-lg"
+          >
+            {/* Image */}
+            <div className="md:w-1/2 overflow-hidden p-3 group transition ">
+              <motion.img
+                src={project.img}
+                alt={project.title}
+                className="w-full h-60 object-cover md:h-60  duration-500 rounded-md group-hover:scale-105 transition-transform "
+                // initial={{ y: 0 }}
+                // whileHover={{ y: -80 }}
+                // transition={{ duration: 1 }}
+              />
+            </div>
+
+            {/* Content */}
+            <div className="p-4 flex flex-col justify-between md:w-1/2">
+              <div>
+                <h3 className="text-xl font-semibold text-lightText">
                   {project.title}
                 </h3>
-                <ul className="flex text-start flex-wrap text-xs font-medium">
+                <ul className="flex flex-wrap gap-2 mt-3">
                   {project.tech.map((tech, techIndex) => (
                     <li
                       key={techIndex}
-                      className="bg-opacity-45 px-2 py-1 border border-gray-300 bg-transparent hover:bg-black hover:text-white rounded-md m-1 transition-transform transform hover:scale-110 hover:text-designColor"
+                      className="text-xs font-medium px-2 py-1 rounded-full border border-s-designColorbg-gray-100  hover:text-white "
                     >
                       {tech}
                     </li>
                   ))}
                 </ul>
               </div>
-              <div className="flex justify-between items-center mt-4">
-                <a
-                  href={project.liveLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <motion.button
-                    className="text-white text-sm border border-designColor rounded-full px-3 py-1 hover:bg-slate-900 transition duration-300 bg-btnColor"
-                    whileHover={{ scale: 1.1 }}
+
+              {/* Links */}
+              <div className="mt-4 grid md:grid-cols-2 gap-4">
+                {/* Live Links */}
+                {project.ClientLiveLink && (
+                  <a
+                    href={project.ClientLiveLink}
+                    target="_blank"
+                    className="text-sm text-white bg-slate-800 py-1 px-4 rounded-full hover:bg-black transition duration-300 text-center"
                   >
-                    Live Link
-                  </motion.button>
-                </a>
-                <a
-                  href={project.githubLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <motion.button
-                    className="text-white border text-sm border-designColor bg-btnColor rounded-full px-6 py-1 hover:bg-slate-900 transition duration-300"
-                    whileHover={{ scale: 1.1 }}
+                    Client Live
+                  </a>
+                )}
+                {project.ServerLiveLink && (
+                  <a
+                    href={project.ServerLiveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-white bg-slate-800 py-1 px-4 rounded-full hover:bg-black transition duration-300 text-center"
                   >
-                    GitHub
-                  </motion.button>
-                </a>
+                    Server Live
+                  </a>
+                )}
+
+                {/* GitHub Links */}
+                {project.ClientGithubLink && (
+                  <a
+                    href={project.ClientGithubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-designColor border border-designColor py-1 px-4 rounded-full hover:bg-designColor hover:text-white transition duration-300 text-center"
+                  >
+                    Client GitHub
+                  </a>
+                )}
+                {project.ServerGithubLink && (
+                  <a
+                    href={project.ServerGithubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-designColor border border-designColor py-1 px-4 rounded-full hover:bg-designColor hover:text-white transition duration-300 text-center"
+                  >
+                    Server GitHub
+                  </a>
+                )}
               </div>
-            </motion.div>
-          ))}
-        </div>
+            </div>
+          </motion.div>
+        ))}
       </div>
     </div>
   );
