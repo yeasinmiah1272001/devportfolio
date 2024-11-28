@@ -2,7 +2,7 @@ import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
 import { MdOutlineClose } from "react-icons/md";
-import SocialLinks from "../Link/Link"; // Assuming this is the correct import for social links
+import SocialLinks from "../Link/Link";
 
 import { logo, yeasincv } from "../../assets";
 
