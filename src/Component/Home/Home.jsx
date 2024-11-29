@@ -8,7 +8,7 @@ import OtherSection from "../Other/Other";
 import Projects from "../Projects/Projects";
 import ScrollBar from "../ScrollBar/ScrollBar";
 import Skils from "../Skils/Skils";
-
+import Test from "../Test/Test";
 const Home = () => {
   return (
     <main className="font-fontFamily min-h-screen  text-lightText">
@@ -17,6 +17,7 @@ const Home = () => {
       <Banner />
       <About />
       <Skils />
+      <Test />
       <Projects />
       <ScrollBar />
       <OtherSection />

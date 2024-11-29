@@ -6,15 +6,23 @@
   display: none;
 }
 
-.banner {
+/* .banner {
   background-image: url("./public/banner.jpg");
   background-size: cover;
   background-position: center;
-}
+} */
 /* body {
     background-image: url("https://i.ibb.co/Lt3Jb5D/bannerBg.jpg");
   }  */
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
-/* Slick Carousel Styles */
-@import "~slick-carousel/slick/slick.css";
-@import "~slick-carousel/slick/slick-theme.css";
+.animate-spin-slow {
+  animation: spin-slow 30s linear infinite; /* 30s for slower rotation */
+}

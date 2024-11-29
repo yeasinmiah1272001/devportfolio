@@ -28,32 +28,34 @@ const HexBubbleDesign = () => {
         events: {
           onHover: {
             enable: true,
-            mode: "bubble", // Bubble effect on hover
+            mode: "repulse", // Repulse effect to push particles away when hovered
           },
         },
         modes: {
-          bubble: {
-            distance: 200, // Bubble interaction range
-            size: 10, // Enlarged size during hover
-            duration: 1, // Smooth expansion
-            opacity: 0.8, // Slight transparency on hover
+          repulse: {
+            distance: 100, // Push particles away when the mouse hovers
+            duration: 0.4, // Duration of the repulse effect
+            speed: 10, // Speed of the push
           },
         },
       },
       particles: {
         color: {
-          value: ["#ff0054", "#1E90FF", "#32CD32"], // Vibrant pink, blue, and green
+          value: ["#8A2BE2", "#00FA9A", "#FF4500"], // Purple, green, and orange particles
         },
         links: {
-          enable: true, // Connecting lines for a network effect
+          enable: true,
           color: "#ffffff",
-          distance: 150,
-          opacity: 0.4,
+          distance: 100,
+          opacity: 0.5,
           width: 1,
         },
         move: {
           enable: true,
-          speed: 2, // Faster movement for dynamic feel
+          speed: 1.5, // Smooth floating effect
+          direction: "none", // Particles move freely in all directions
+          random: true, // Random movement for a natural look
+          straight: false,
           outModes: {
             default: "out", // Particles move out and reappear
           },
@@ -61,39 +63,39 @@ const HexBubbleDesign = () => {
         number: {
           density: {
             enable: true,
-            area: 900, // Ensures even spacing
+            area: 700, // Density of particles
           },
-          value: 70, // Total number of particles
+          value: 90, // Total number of particles
         },
         opacity: {
-          value: 0.6, // Subtle initial transparency
+          value: 0.6, // Particles have a soft opacity
           animation: {
             enable: true,
-            speed: 1,
-            minimumValue: 0.4,
+            speed: 1.5, // Smooth fade-in and fade-out
+            minimumValue: 0.3, // Fade to a minimum opacity
           },
         },
         shape: {
-          type: "polygon", // Hexagonal particles
-          options: {
-            polygon: {
-              sides: 6, // Hexagons
-            },
-          },
+          type: "circle", // Circular particles for smoothness
         },
         size: {
-          value: { min: 3, max: 6 }, // Varying initial sizes
+          value: { min: 4, max: 8 }, // Varying particle sizes
           animation: {
             enable: true,
-            speed: 2,
-            minimumValue: 2,
+            speed: 2, // Smooth size changes
+            minimumValue: 3, // Minimum size of particles
           },
         },
       },
       detectRetina: true,
-      //   background: {
-      //     color: "#1A202C", // Dark slate gray for a sleek background
-      //   },
+      // background: {
+      //   color: "#2C3E50", // Dark background for contrast
+      //   image:
+      //     "radial-gradient(circle, rgba(44, 62, 80, 0.9), rgba(52, 152, 219, 0.9))", // Radial gradient background
+      //   position: "50% 50%",
+      //   repeat: "no-repeat",
+      //   size: "cover",
+      // },
     }),
     []
   );
