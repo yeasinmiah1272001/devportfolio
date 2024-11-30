@@ -1,164 +1,189 @@
-import { fullstack1, fullstack2, img1, img2 } from "../../assets";
-import { motion } from "framer-motion";
+import React, { useState, useEffect } from "react";
+import {
+  orabiImg1,
+  orabiImg2,
+  orabiImg3,
+  orabiImg4,
+  orabiImg5,
+  orabiImg6,
+  orabiImg7,
+  orabiImg8,
+  ShofyImg1,
+  ShofyImg2,
+  ShofyImg3,
+  ShofyImg4,
+  ShofyImg5,
+} from "../../assets";
+
+const projects = [
+  {
+    id: 1,
+    name: "E-Commarce-Orabi",
+    description:
+      "This project is built using Next.js and TypeScript along with several modern libraries and tools to enhance functionality and performance. It includes state management, UI components, animations, and integrations with third-party services like Stripe.",
+    images: [
+      orabiImg1,
+      orabiImg2,
+      orabiImg3,
+      orabiImg4,
+      orabiImg5,
+      orabiImg6,
+      orabiImg7,
+      orabiImg8,
+    ],
+    ClientLiveLink: "https://projectone.com",
+    ClientGitHubLink: "https://github.com/myusername/projectone",
+    ServerLiveLink: "https://projectone.com",
+    ServerGitHubLink: "https://github.com/myusername/projectone",
+    technologies: ["Next.js", "TypeScript", "Redux", "Next Auth", "Stripe Js"],
+  },
+  {
+    id: 2,
+    name: "Ecommerce-Supper-Shop",
+    description:
+      "This project is built using Next.js and TypeScript along with several modern libraries and tools to enhance functionality and performance. It includes state management, UI components, animations, and integrations with third-party services like Stripe.",
+    images: [ShofyImg1, ShofyImg2, ShofyImg3, ShofyImg4, ShofyImg5],
+    ClientLiveLink: "https://projecttwo.com",
+    ClientGitHubLink: "https://github.com/myusername/projecttwo",
+    ServerLiveLink: "https://projecttwo.com",
+    ServerGitHubLink: "https://github.com/myusername/projecttwo",
+    technologies: ["Next.js", "TypeScript", "Redux", "Next Auth", "Stripe Js"],
+  },
+  {
+    id: 3,
+    name: "E-commerce-shofy",
+    description:
+      "This project is built using Next.js and TypeScript along with several modern libraries and tools to enhance functionality and performance. It includes state management, UI components, animations, and integrations with third-party services like Stripe.",
+    images: [ShofyImg1, ShofyImg2, ShofyImg3, ShofyImg4, ShofyImg5],
+    ClientLiveLink: "https://projectthree.com",
+    ClientGitHubLink: "https://github.com/myusername/projectthree",
+    technologies: ["Next.js", "TypeScript", "Redux", "Next Auth", "Stripe Js"],
+  },
+  {
+    id: 4,
+    name: "Book-store",
+    description: "This project showcases my skills in React and Tailwind CSS.",
+    images: [ShofyImg1, ShofyImg2, ShofyImg3, ShofyImg4, ShofyImg5],
+    ClientLiveLink: "https://projectfour.com",
+    ClientGitHubLink: "https://github.com/myusername/projectfour",
+    technologies: ["React", "Tailwind CSS", "Redux", "Next Auth"],
+  },
+];
 
 const Projects = () => {
-  const project = [
-    {
-      img: fullstack1,
-      title: "Orabi-Ecommerce",
-      tech: [
-        "React Js",
-        "Stripe Js",
-        "Mongoose",
-        "Redux Toolkit",
-        "Redux-Persist",
-        "Node Js",
-        "Express Js",
-      ],
-      ClientLiveLink: "https://github.com/yeasinmiah1272001/orabi-fullstack",
-      ServerLiveLink: "https://github.com/yeasinmiah1272001/orabi-fullstack",
-      ClientGithubLink: "https://github.com/yeasinmiah1272001/orabi-fullstack",
-      ServerGithubLink: "https://github.com/yeasinmiah1272001/orabi-fullstack",
-    },
-    {
-      img: fullstack2,
-      title: "E-Commerce-Suppershop",
-      tech: [
-        "React Js",
-        "Stripe Js",
-        "Mongoose",
-        "Redux Toolkit",
-        "Redux-Persist",
-        "Node Js",
-        "Express Js",
-      ],
-      ClientLiveLink: "https://github.com/yeasinmiah1272001/mern-suppershop",
-      ServerLiveLink: "https://github.com/yeasinmiah1272001/mern-suppershop",
-      ClientGithubLink: "https://github.com/yeasinmiah1272001/mern-suppershop",
-      ServerGithubLink: "https://github.com/yeasinmiah1272001/mern-suppershop",
-    },
-    {
-      img: img1,
-      title: "E-Commerce-Shofy",
-      tech: ["Next.js", "TypeScript", "Redux", "Next Auth"],
-      ClientLiveLink: "https://shofyproject.vercel.app",
-      ClientGithubLink:
-        "https://github.com/yeasinmiah1272001/shofy-practice-main",
-    },
-    {
-      img: img2,
-      title: "E-Commerce-Shopping",
-      tech: ["Next.js", "REST API", "Redux", "Next Auth"],
-      ClientLiveLink: "https://eid-shopping.vercel.app",
-      ClientGithubLink: "https://github.com/yeasinmiah1272001/eid-shopping",
-    },
-  ];
+  const [currentImageIndexes, setCurrentImageIndexes] = useState(
+    Array(projects.length).fill(0)
+  );
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndexes((prevIndexes) =>
+        prevIndexes.map((index, projectIndex) =>
+          index === projects[projectIndex].images.length - 1 ? 0 : index + 1
+        )
+      );
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <div id="projects" className="px-4 md:px-10 lg:mx-20 space-y-14 lg:mt-10">
-      {/* Header */}
-      <div className="text-center space-y-4">
-        <motion.h1
-          className="text-4xl font-bold text-designColor"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-        >
-          My Projects
-        </motion.h1>
-        <p className="text-lightText text-sm">
-          Explore some of my recent projects showcasing full-stack and frontend
-          development.
-        </p>
-      </div>
-
-      {/* Projects List */}
-      <div className="space-y-8">
-        {project.map((project, index) => (
-          <motion.div
-            key={index}
-            className="flex flex-col md:flex-row bg-gradient-to-b text-lightText  border border-1 border-designColor rounded-lg"
-          >
-            {/* Image */}
-            <div className="md:w-1/2 overflow-hidden p-3 group transition ">
-              <motion.img
-                src={project.img}
-                alt={project.title}
-                className="w-full h-60 object-cover md:h-60  duration-500 rounded-md group-hover:scale-105 transition-transform "
-                // initial={{ y: 0 }}
-                // whileHover={{ y: -80 }}
-                // transition={{ duration: 1 }}
-              />
-            </div>
-
-            {/* Content */}
-            <div className="p-4 flex flex-col justify-between md:w-1/2">
-              <div>
-                <h3 className="text-xl font-semibold text-lightText">
-                  {project.title}
-                </h3>
-                <ul className="flex flex-wrap gap-2 mt-3">
-                  {project.tech.map((tech, techIndex) => (
-                    <li
-                      key={techIndex}
-                      className="text-xs font-medium px-2 py-1 rounded-full border border-s-designColorbg-gray-100  hover:text-white "
-                    >
-                      {tech}
-                    </li>
-                  ))}
-                </ul>
+    <section>
+      <section className="py-16 text-lightText">
+        <div className="container mx-auto px-4 flex flex-col gap-12 h-full">
+          {projects.map((project, projectIndex) => (
+            <div
+              key={project.id}
+              className={`flex flex-col ${
+                projectIndex % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+              } gap-8 shadow-md p-6 rounded-lg hover:shadow-lg transition-shadow duration-300`}
+            >
+              {/* Image Slider */}
+              <div className="md:w-1/2 relative h-[300px] overflow-hidden rounded-lg border border-designColor">
+                {project.images.map((image, index) => (
+                  <img
+                    key={index}
+                    src={image}
+                    alt={`Project image ${index + 1}`}
+                    className={`absolute top-0 left-0 w-full h-full p-2 transition-opacity duration-1000 ${
+                      index === currentImageIndexes[projectIndex]
+                        ? "opacity-100"
+                        : "opacity-0"
+                    }`}
+                  />
+                ))}
               </div>
 
-              {/* Links */}
-              <div className="mt-4 grid md:grid-cols-2 gap-4">
-                {/* Live Links */}
-                {project.ClientLiveLink && (
+              {/* Project Details */}
+              <div className="md:w-1/2 flex flex-col justify-center ">
+                <h2 className="text-2xl font-semibold mb-4 flex items-center gap-2">
+                  {project.name}
                   <a
                     href={project.ClientLiveLink}
                     target="_blank"
-                    className="text-sm text-white bg-slate-800 py-1 px-4 rounded-full hover:bg-black transition duration-300 text-center"
-                  >
-                    Client Live
-                  </a>
-                )}
-                {project.ServerLiveLink && (
-                  <a
-                    href={project.ServerLiveLink}
-                    target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm text-white bg-slate-800 py-1 px-4 rounded-full hover:bg-black transition duration-300 text-center"
-                  >
-                    Server Live
-                  </a>
-                )}
-
-                {/* GitHub Links */}
-                {project.ClientGithubLink && (
-                  <a
-                    href={project.ClientGithubLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-designColor border border-designColor py-1 px-4 rounded-full hover:bg-designColor hover:text-white transition duration-300 text-center"
-                  >
-                    Client GitHub
-                  </a>
-                )}
-                {project.ServerGithubLink && (
-                  <a
-                    href={project.ServerGithubLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-designColor border border-designColor py-1 px-4 rounded-full hover:bg-designColor hover:text-white transition duration-300 text-center"
-                  >
-                    Server GitHub
-                  </a>
-                )}
+                    className="text-blue-500 hover:text-blue-600"
+                  ></a>
+                </h2>
+                <p className="text-lightText mb-6">{project.description}</p>
+                <div className="flex flex-wrap gap-3 mb-6">
+                  {project.technologies.map((tech, index) => (
+                    <span
+                      key={index}
+                      className="text-xs font-medium px-2 py-1 rounded-md border border-s-designColor  hover:text-white"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex gap-3">
+                  {project.ClientLiveLink && (
+                    <a
+                      href={project.ClientLiveLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="border border-1 text-sm hover:bg-black duration-300 bg-transparent hover:text-white border-designColor p-2 rounded-md px-2 text-center items-center"
+                    >
+                      Live Demo
+                    </a>
+                  )}
+                  {project.ClientGitHubLink && (
+                    <a
+                      href={project.ClientGitHubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="border border-1 hover:bg-black duration-300 bg-transparent hover:text-white border-designColor p-2 text-sm rounded-md px-2 text-center items-center"
+                    >
+                      Client Github
+                    </a>
+                  )}
+                  {project.ServerLiveLink && (
+                    <a
+                      href={project.ServerLiveLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="border border-1 text-sm hover:bg-black duration-300 bg-transparent hover:text-white border-designColor p-2 rounded-md px-2 text-center items-center"
+                    >
+                      Server Demo
+                    </a>
+                  )}
+                  {project.ServerGitHubLink && (
+                    <a
+                      href={project.ServerGitHubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="border border-1 text-sm hover:bg-black duration-300 bg-transparent hover:text-white border-designColor p-2 rounded-md px-2 text-center items-center"
+                    >
+                      Server GitHub
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
-          </motion.div>
-        ))}
-      </div>
-    </div>
+          ))}
+        </div>
+      </section>
+    </section>
   );
 };
 

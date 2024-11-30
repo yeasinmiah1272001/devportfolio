@@ -22,6 +22,19 @@ import frontend5 from "./image/frontend/fashion.png";
 import frontend6 from "./image/frontend/blog.png";
 import fullstack1 from "./image/full stack/orabi.png";
 import fullstack2 from "./image/full stack/supershop.png";
+import ShofyImg1 from "./image/full stack/shofy/1.png";
+import ShofyImg2 from "./image/full stack/shofy/2.png";
+import ShofyImg3 from "./image/full stack/shofy/3.png";
+import ShofyImg4 from "./image/full stack/shofy/4.png";
+import ShofyImg5 from "./image/full stack/shofy/5.png";
+import orabiImg1 from "./image/full stack/orabi/1.png";
+import orabiImg2 from "./image/full stack/orabi/2.png";
+import orabiImg3 from "./image/full stack/orabi/3.png";
+import orabiImg4 from "./image/full stack/orabi/4.png";
+import orabiImg5 from "./image/full stack/orabi/5.png";
+import orabiImg6 from "./image/full stack/orabi/6.png";
+import orabiImg7 from "./image/full stack/orabi/7.png";
+import orabiImg8 from "./image/full stack/orabi/8.png";
 
 export {
   yeasin,
@@ -48,4 +61,17 @@ export {
   people,
   progranning,
   habiganj,
+  ShofyImg1,
+  ShofyImg2,
+  orabiImg5,
+  orabiImg6,
+  ShofyImg3,
+  ShofyImg4,
+  ShofyImg5,
+  orabiImg1,
+  orabiImg2,
+  orabiImg3,
+  orabiImg4,
+  orabiImg7,
+  orabiImg8,
 };
