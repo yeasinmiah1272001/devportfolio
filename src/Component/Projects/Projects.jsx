@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+import Slider from "react-slick"; // Import the Slider component
+import "slick-carousel/slick/slick.css"; // Import slick styles
+import "slick-carousel/slick/slick-theme.css";
 import {
   orabiImg1,
   orabiImg2,
@@ -13,11 +16,56 @@ import {
   ShofyImg3,
   ShofyImg4,
   ShofyImg5,
+  supershop1,
+  supershop10,
+  supershop11,
+  supershop12,
+  supershop2,
+  supershop3,
+  supershop4,
+  supershop5,
+  supershop6,
+  supershop7,
+  supershop8,
+  supershop9,
 } from "../../assets";
 
 const projects = [
   {
-    id: 1,
+    id: 2,
+    name: "Ecommerce-Supper-Shop",
+    description:
+      "This project is built using Next.js and TypeScript along with several modern libraries and tools to enhance functionality and performance. It includes state management, UI components, animations, and integrations with third-party services like Stripe.",
+    images: [
+      supershop2,
+      supershop3,
+      supershop1,
+      supershop4,
+      supershop5,
+      supershop6,
+      supershop7,
+      supershop8,
+      supershop9,
+      supershop10,
+      supershop11,
+      supershop12,
+    ],
+    ClientLiveLink: "https://projecttwo.com",
+    ClientGitHubLink: "https://github.com/myusername/projecttwo",
+    ServerGitHubLink: "https://github.com/myusername/projecttwo",
+    technologies: [
+      "React.Js",
+      "Mongoose",
+      "Express Js",
+      "Node Js",
+      "Redux",
+      "Stripe Js",
+      "Marquee",
+      "Pie Chart",
+    ],
+  },
+  {
+    id: 2,
     name: "E-Commarce-Orabi",
     description:
       "This project is built using Next.js and TypeScript along with several modern libraries and tools to enhance functionality and performance. It includes state management, UI components, animations, and integrations with third-party services like Stripe.",
@@ -35,20 +83,18 @@ const projects = [
     ClientGitHubLink: "https://github.com/myusername/projectone",
     ServerLiveLink: "https://projectone.com",
     ServerGitHubLink: "https://github.com/myusername/projectone",
-    technologies: ["Next.js", "TypeScript", "Redux", "Next Auth", "Stripe Js"],
+    technologies: [
+      "React.Js",
+      "Mongoose",
+      "Express Js",
+      "Node Js",
+      "Redux",
+      "Stripe Js",
+      "Marquee",
+      "Pie Chart",
+    ],
   },
-  {
-    id: 2,
-    name: "Ecommerce-Supper-Shop",
-    description:
-      "This project is built using Next.js and TypeScript along with several modern libraries and tools to enhance functionality and performance. It includes state management, UI components, animations, and integrations with third-party services like Stripe.",
-    images: [ShofyImg1, ShofyImg2, ShofyImg3, ShofyImg4, ShofyImg5],
-    ClientLiveLink: "https://projecttwo.com",
-    ClientGitHubLink: "https://github.com/myusername/projecttwo",
-    ServerLiveLink: "https://projecttwo.com",
-    ServerGitHubLink: "https://github.com/myusername/projecttwo",
-    technologies: ["Next.js", "TypeScript", "Redux", "Next Auth", "Stripe Js"],
-  },
+
   {
     id: 3,
     name: "E-commerce-shofy",
@@ -71,22 +117,6 @@ const projects = [
 ];
 
 const Projects = () => {
-  const [currentImageIndexes, setCurrentImageIndexes] = useState(
-    Array(projects.length).fill(0)
-  );
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndexes((prevIndexes) =>
-        prevIndexes.map((index, projectIndex) =>
-          index === projects[projectIndex].images.length - 1 ? 0 : index + 1
-        )
-      );
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <section>
       <section className="py-16 text-lightText">
@@ -99,23 +129,30 @@ const Projects = () => {
               } gap-8 shadow-md p-6 rounded-lg hover:shadow-lg transition-shadow duration-300`}
             >
               {/* Image Slider */}
-              <div className="md:w-1/2 relative h-[300px] overflow-hidden rounded-lg border border-designColor">
-                {project.images.map((image, index) => (
-                  <img
-                    key={index}
-                    src={image}
-                    alt={`Project image ${index + 1}`}
-                    className={`absolute top-0 left-0 w-full h-full p-2 transition-opacity duration-1000 ${
-                      index === currentImageIndexes[projectIndex]
-                        ? "opacity-100"
-                        : "opacity-0"
-                    }`}
-                  />
-                ))}
+              <div className="md:w-1/2 relative h-[260px] overflow-hidden rounded-lg border border-designColor">
+                <Slider
+                  // dots={true}
+                  infinite={true}
+                  speed={500}
+                  slidesToShow={1}
+                  slidesToScroll={1}
+                  autoplay={true} // Enable autoplay
+                  autoplaySpeed={3000} // Autoplay speed in milliseconds
+                >
+                  {project.images.map((image, index) => (
+                    <div key={index}>
+                      <img
+                        src={image}
+                        alt={`Project image ${index + 1}`}
+                        className="w-full lg:h-[250px] h-[285px] p-3 rounded-lg object-cover"
+                      />
+                    </div>
+                  ))}
+                </Slider>
               </div>
 
               {/* Project Details */}
-              <div className="md:w-1/2 flex flex-col justify-center ">
+              <div className="md:w-1/2 flex flex-col justify-center">
                 <h2 className="text-2xl font-semibold mb-4 flex items-center gap-2">
                   {project.name}
                   <a
@@ -130,7 +167,7 @@ const Projects = () => {
                   {project.technologies.map((tech, index) => (
                     <span
                       key={index}
-                      className="text-xs font-medium px-2 py-1 rounded-md border border-s-designColor  hover:text-white"
+                      className="text-xs font-medium px-2 py-1 rounded-md border border-s-designColor hover:text-white"
                     >
                       {tech}
                     </span>

@@ -35,6 +35,18 @@ import orabiImg5 from "./image/full stack/orabi/5.png";
 import orabiImg6 from "./image/full stack/orabi/6.png";
 import orabiImg7 from "./image/full stack/orabi/7.png";
 import orabiImg8 from "./image/full stack/orabi/8.png";
+import supershop1 from "./image/full stack/supershop/1.png";
+import supershop2 from "./image/full stack/supershop/2.png";
+import supershop3 from "./image/full stack/supershop/3.png";
+import supershop4 from "./image/full stack/supershop/4.png";
+import supershop5 from "./image/full stack/supershop/5.png";
+import supershop6 from "./image/full stack/supershop/6.png";
+import supershop7 from "./image/full stack/supershop/7.png";
+import supershop8 from "./image/full stack/supershop/8.png";
+import supershop9 from "./image/full stack/supershop/9.png";
+import supershop10 from "./image/full stack/supershop/10.png";
+import supershop11 from "./image/full stack/supershop/11.png";
+import supershop12 from "./image/full stack/supershop/12.png";
 
 export {
   yeasin,
@@ -74,4 +86,16 @@ export {
   orabiImg4,
   orabiImg7,
   orabiImg8,
+  supershop1,
+  supershop2,
+  supershop3,
+  supershop4,
+  supershop5,
+  supershop6,
+  supershop7,
+  supershop8,
+  supershop9,
+  supershop10,
+  supershop11,
+  supershop12,
 };
