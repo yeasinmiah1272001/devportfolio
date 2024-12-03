@@ -320,10 +320,10 @@ const OtherSection = () => {
       <div className="max-w-[1200px] mx-auto mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {portfolioToDisplay.map((project, index) => (
           <motion.div
-            key={project.id}
+            key={index}
             className="flex flex-col w-full border p-5 shadow-2xl rounded-lg transition duration-500 h-full"
           >
-            <div className="relative overflow-hidden rounded-t-lg h-60 group">
+            <div className="overflow-hidden  rounded-t-lg h-60 group">
               <motion.img
                 src={project.img}
                 alt={project.title}
@@ -332,11 +332,9 @@ const OtherSection = () => {
                 whileHover={{ y: -80 }}
                 transition={{ duration: 1 }}
               />
-
-              <div className="absolute inset-0  opacity-0 group-hover:opacity-50 transition-opacity duration-300" />
             </div>
             <div className="flex-grow mt-4">
-              <h3 className="text-lg font-bold text-lightText mb-2">
+              <h3 className="text-sm font-bold text-black mb-2">
                 {project.title}
               </h3>
               <ul className="flex text-start flex-wrap text-xs font-medium">
@@ -349,6 +347,32 @@ const OtherSection = () => {
                   </li>
                 ))}
               </ul>
+            </div>
+            <div className="flex justify-between items-center mt-4">
+              <a
+                href={project.liveLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <motion.button
+                  className="text-white text-sm border border-gray-400 rounded-full px-3 py-1 hover:bg-slate-900 transition duration-300 bg-btnColor"
+                  whileHover={{ scale: 1.1 }}
+                >
+                  Live Link
+                </motion.button>
+              </a>
+              <a
+                href={project.githubLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <motion.button
+                  className="text-white border text-sm border-gray-400 bg-btnColor rounded-full px-6 py-1 hover:bg-slate-900 transition duration-300"
+                  whileHover={{ scale: 1.1 }}
+                >
+                  GitHub
+                </motion.button>
+              </a>
             </div>
           </motion.div>
         ))}

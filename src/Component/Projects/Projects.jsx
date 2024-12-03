@@ -50,9 +50,12 @@ const projects = [
       supershop11,
       supershop12,
     ],
-    ClientLiveLink: "https://projecttwo.com",
-    ClientGitHubLink: "https://github.com/myusername/projecttwo",
-    ServerGitHubLink: "https://github.com/myusername/projecttwo",
+    ClientLiveLink:
+      "https://github.com/yeasinmiah1272001/mern-suppershop/tree/main/client",
+    ClientGitHubLink:
+      "https://github.com/yeasinmiah1272001/mern-suppershop/tree/main/server",
+    ServerGitHubLink:
+      "https://github.com/yeasinmiah1272001/mern-suppershop/tree/main/server",
     technologies: [
       "React.Js",
       "Mongoose",
@@ -79,10 +82,10 @@ const projects = [
       orabiImg7,
       orabiImg8,
     ],
-    ClientLiveLink: "https://projectone.com",
-    ClientGitHubLink: "https://github.com/myusername/projectone",
-    ServerLiveLink: "https://projectone.com",
-    ServerGitHubLink: "https://github.com/myusername/projectone",
+    ClientLiveLink: "https://github.com/yeasinmiah1272001/orabi-client",
+    ClientGitHubLink: "https://github.com/yeasinmiah1272001/orabi-client",
+    ServerLiveLink: "https://github.com/yeasinmiah1272001/orabi-server",
+    ServerGitHubLink: "https://github.com/yeasinmiah1272001/orabi-server",
     technologies: [
       "React.Js",
       "Mongoose",
@@ -101,17 +104,19 @@ const projects = [
     description:
       "This project is built using Next.js and TypeScript along with several modern libraries and tools to enhance functionality and performance. It includes state management, UI components, animations, and integrations with third-party services like Stripe.",
     images: [ShofyImg1, ShofyImg2, ShofyImg3, ShofyImg4, ShofyImg5],
-    ClientLiveLink: "https://projectthree.com",
-    ClientGitHubLink: "https://github.com/myusername/projectthree",
+    ClientLiveLink: "https://shofyproject.vercel.app/",
+    ClientGitHubLink:
+      "https://github.com/yeasinmiah1272001/shofy-practice-main",
     technologies: ["Next.js", "TypeScript", "Redux", "Next Auth", "Stripe Js"],
   },
   {
     id: 4,
-    name: "Book-store",
+    name: "Shopping",
     description: "This project showcases my skills in React and Tailwind CSS.",
     images: [ShofyImg1, ShofyImg2, ShofyImg3, ShofyImg4, ShofyImg5],
-    ClientLiveLink: "https://projectfour.com",
-    ClientGitHubLink: "https://github.com/myusername/projectfour",
+    ClientLiveLink: "https://eid-shopping.vercel.app/",
+    ClientGitHubLink:
+      "https://github.com/yeasinmiah1272001/shofy-practice-main",
     technologies: ["React", "Tailwind CSS", "Redux", "Next Auth"],
   },
 ];
