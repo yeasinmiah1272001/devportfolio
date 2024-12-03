@@ -11,7 +11,7 @@ import Skils from "../Skils/Skils";
 import Test from "../Test/Test";
 const Home = () => {
   return (
-    <main className="font-fontFamily min-h-screen  text-lightText">
+    <main className="font-fontFamily min-h-screen overflow-hidden  text-lightText">
       <Design />
       <Header />
       <Banner />
