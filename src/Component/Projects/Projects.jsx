@@ -123,7 +123,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section>
+    <section id="projects">
       <section className="py-16 text-lightText">
         <div className="container mx-auto px-4 flex flex-col gap-12 h-full">
           {projects.map((project, projectIndex) => (
