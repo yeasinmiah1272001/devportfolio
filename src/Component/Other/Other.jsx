@@ -334,7 +334,7 @@ const OtherSection = () => {
               />
             </div>
             <div className="flex-grow mt-4">
-              <h3 className="text-sm font-bold text-black mb-2">
+              <h3 className="text-sm font-bold text-white mb-2">
                 {project.title}
               </h3>
               <ul className="flex text-start flex-wrap text-xs font-medium">
