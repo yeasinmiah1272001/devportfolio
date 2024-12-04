@@ -123,33 +123,42 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects">
-      <section className="py-16 text-lightText">
-        <div className="container mx-auto px-4 flex flex-col gap-12 h-full">
+    <section id="projects" className="py-16 bg-[#0A192F]">
+      <div className="container mx-auto px-4">
+        {/* Section Title */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-designColor">My Projects</h1>
+          <p className="text-lightText mt-2 text-sm">
+            Explore some of my recent work showcasing various technologies and
+            designs.
+          </p>
+        </div>
+
+        {/* Projects */}
+        <div className="flex flex-col gap-16">
           {projects.map((project, projectIndex) => (
             <div
               key={project.id}
               className={`flex flex-col ${
-                projectIndex % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-              } gap-8 shadow-md p-6 rounded-lg hover:shadow-lg transition-shadow duration-300`}
+                projectIndex % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
+              } gap-8 items-center shadow-md p-6 rounded-lg bg-[#112240] hover:shadow-lg transition-shadow duration-300`}
             >
               {/* Image Slider */}
-              <div className="md:w-1/2 relative h-[260px] overflow-hidden rounded-lg border border-designColor">
+              <div className="w-full lg:w-1/2 relative h-[260px] overflow-hidden rounded-lg border border-designColor">
                 <Slider
-                  // dots={true}
                   infinite={true}
                   speed={500}
                   slidesToShow={1}
                   slidesToScroll={1}
-                  autoplay={true} // Enable autoplay
-                  autoplaySpeed={3000} // Autoplay speed in milliseconds
+                  autoplay={true}
+                  autoplaySpeed={3000}
                 >
                   {project.images.map((image, index) => (
-                    <div key={index}>
+                    <div className="" key={index}>
                       <img
                         src={image}
                         alt={`Project image ${index + 1}`}
-                        className="w-full lg:h-[250px] h-[285px] p-3 rounded-lg object-cover"
+                        className="w-full h-[260px] lg:h-[300px] lg:p-3 p-4 object-cover rounded-lg"
                       />
                     </div>
                   ))}
@@ -157,34 +166,33 @@ const Projects = () => {
               </div>
 
               {/* Project Details */}
-              <div className="md:w-1/2 flex flex-col justify-center">
-                <h2 className="text-2xl font-semibold mb-4 flex items-center gap-2">
+              <div className="w-full lg:w-1/2 flex flex-col justify-center">
+                <h2 className="text-2xl font-semibold text-designColor mb-4">
                   {project.name}
-                  <a
-                    href={project.ClientLiveLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-500 hover:text-blue-600"
-                  ></a>
                 </h2>
-                <p className="text-lightText mb-6">{project.description}</p>
+                <p className="text-lightText mb-6 text-sm lg:text-base leading-relaxed">
+                  {project.description}
+                </p>
+                {/* Technologies */}
                 <div className="flex flex-wrap gap-3 mb-6">
                   {project.technologies.map((tech, index) => (
                     <span
                       key={index}
-                      className="text-xs font-medium px-2 py-1 rounded-md border border-s-designColor hover:text-white"
+                      className="text-xs font-medium px-3 py-1 rounded-md border border-designColor text-lightText hover:bg-designColor hover:text-white transition duration-200"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
-                <div className="flex gap-3">
+
+                {/* Links */}
+                <div className="flex flex-wrap gap-4">
                   {project.ClientLiveLink && (
                     <a
                       href={project.ClientLiveLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="border border-1 text-sm hover:bg-black duration-300 bg-transparent hover:text-white border-designColor p-2 rounded-md px-2 text-center items-center"
+                      className="px-4 py-2 rounded-md font-medium text-sm bg-transparent border border-designColor hover:bg-designColor hover:text-white transition duration-200"
                     >
                       Live Demo
                     </a>
@@ -194,9 +202,9 @@ const Projects = () => {
                       href={project.ClientGitHubLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="border border-1 hover:bg-black duration-300 bg-transparent hover:text-white border-designColor p-2 text-sm rounded-md px-2 text-center items-center"
+                      className="px-4 py-2 rounded-md font-medium text-sm bg-transparent border border-designColor hover:bg-designColor hover:text-white transition duration-200"
                     >
-                      Client Github
+                      Client GitHub
                     </a>
                   )}
                   {project.ServerLiveLink && (
@@ -204,7 +212,7 @@ const Projects = () => {
                       href={project.ServerLiveLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="border border-1 text-sm hover:bg-black duration-300 bg-transparent hover:text-white border-designColor p-2 rounded-md px-2 text-center items-center"
+                      className="px-4 py-2 rounded-md font-medium text-sm bg-transparent border border-designColor hover:bg-designColor hover:text-white transition duration-200"
                     >
                       Server Demo
                     </a>
@@ -214,7 +222,7 @@ const Projects = () => {
                       href={project.ServerGitHubLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="border border-1 text-sm hover:bg-black duration-300 bg-transparent hover:text-white border-designColor p-2 rounded-md px-2 text-center items-center"
+                      className="px-4 py-2 rounded-md font-medium text-sm bg-transparent border border-designColor hover:bg-designColor hover:text-white transition duration-200"
                     >
                       Server GitHub
                     </a>
@@ -224,7 +232,7 @@ const Projects = () => {
             </div>
           ))}
         </div>
-      </section>
+      </div>
     </section>
   );
 };
