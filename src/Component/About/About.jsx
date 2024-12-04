@@ -1,4 +1,5 @@
-import { FaArrowAltCircleRight } from "react-icons/fa";
+import { FaCode } from "react-icons/fa";
+
 import Container from "../Container/Container";
 import SectionTitle from "../SectionTitle/SectionTitle";
 import { yeasin } from "../../assets";
@@ -7,8 +8,8 @@ import AnimatedBorder from "../AnimatedBorder/AnimatedBorder";
 const About = () => {
   return (
     <div>
-      <Container id="about" className="py-20 lg:px-20">
-        <SectionTitle titleNo={"01 ."} title={"About me"} />
+      <Container id="about" className=" lg:px-20">
+        <SectionTitle title={"About me"} />
         <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start gap-10 lg:gap-20">
           {/* Left Side - Text and Skills */}
           <div className="lg:w-2/3 w-full">
@@ -24,25 +25,25 @@ const About = () => {
               {/* Left List - Skills */}
               <div className="space-y-4">
                 <div className="flex gap-2 items-center">
-                  <FaArrowAltCircleRight className="text-designColor" />
+                  <FaCode className="text-designColor" />
                   <a href="" className="hover:text-lightText text-darkText">
                     JavaScript (ES6+)
                   </a>
                 </div>
                 <div className="flex gap-2 items-center">
-                  <FaArrowAltCircleRight className="text-designColor" />
+                  <FaCode className="text-designColor" />
                   <a href="" className="hover:text-lightText text-darkText">
                     React.js
                   </a>
                 </div>
                 <div className="flex gap-2 items-center">
-                  <FaArrowAltCircleRight className="text-designColor" />
+                  <FaCode className="text-designColor" />
                   <a href="" className="hover:text-lightText text-darkText">
                     MongoDB
                   </a>
                 </div>
                 <div className="flex gap-2 items-center">
-                  <FaArrowAltCircleRight className="text-designColor" />
+                  <FaCode className="text-designColor" />
                   <a href="" className="hover:text-lightText text-darkText">
                     TailwindCSS
                   </a>
@@ -52,25 +53,25 @@ const About = () => {
               {/* Right List - More Skills */}
               <div className="space-y-4">
                 <div className="flex gap-2 items-center">
-                  <FaArrowAltCircleRight className="text-designColor" />
+                  <FaCode className="text-designColor" />
                   <a href="" className="hover:text-lightText text-darkText">
                     Next.js
                   </a>
                 </div>
                 <div className="flex gap-2 items-center">
-                  <FaArrowAltCircleRight className="text-designColor" />
+                  <FaCode className="text-designColor" />
                   <a href="" className="hover:text-lightText text-darkText">
                     Node.js
                   </a>
                 </div>
                 <div className="flex gap-2 items-center">
-                  <FaArrowAltCircleRight className="text-designColor" />
+                  <FaCode className="text-designColor" />
                   <a href="" className="hover:text-lightText text-darkText">
                     Express.js
                   </a>
                 </div>
                 <div className="flex gap-2 items-center">
-                  <FaArrowAltCircleRight className="text-designColor" />
+                  <FaCode className="text-designColor" />
                   <a href="" className="hover:text-lightText text-darkText">
                     Firebase
                   </a>

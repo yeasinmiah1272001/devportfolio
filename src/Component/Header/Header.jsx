@@ -27,7 +27,7 @@ const Header = () => {
   };
 
   return (
-    <div className="h-20 shadow-lg shadow-designColor/10 px-4 lg:px-20 sticky top-0 z-50 bg-[#0A192F]">
+    <div className="h-20 shadow-lg overflow-hidden shadow-designColor/10 px-4 lg:px-20  fixed w-full top-0 z-30 bg-[#0A192F]">
       <div className="max-w-[1440px] mx-auto flex items-center h-full justify-between">
         {/* Logo */}
         <img src={logo} alt="logo" className="h-24 py-3 w-28 cursor-pointer" />

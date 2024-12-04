@@ -14,6 +14,7 @@ const Home = () => {
     <main className="font-fontFamily min-h-screen overflow-hidden  text-lightText">
       <Design />
       <Header />
+
       <Banner />
       <About />
       <Skils />

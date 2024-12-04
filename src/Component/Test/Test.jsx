@@ -46,7 +46,7 @@ const Test = () => {
   ];
 
   return (
-    <div className="flex justify-center items-center min-h-screen text-white px-4 md:px-10 lg:px-20 space-y-6">
+    <div className="flex justify-center items-center py-14  text-white px-4 md:px-10 lg:px-20 space-y-6">
       <div className="flex flex-wrap justify-around mx-auto items-center w-full max-w-7xl">
         {/* Left side - Circle of icons */}
         <div className="relative hidden md:inline-flex w-48 h-48 sm:w-36 sm:h-36 lg:w-96 lg:h-96 mr-12 mb-8 sm:mb-0">

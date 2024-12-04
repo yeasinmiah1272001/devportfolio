@@ -297,7 +297,7 @@ const OtherSection = () => {
       </h1>
 
       {/* Tabs */}
-      <div className="flex justify-center mt-8 gap-6">
+      <div className="hidden md:flex mx-auto items-center justify-center mt-8 gap-6">
         {["All", "Full Stack", "Frontend", "Design"].map((category) => (
           <button
             key={category}
@@ -308,14 +308,13 @@ const OtherSection = () => {
             className={`px-4 py-2 rounded-lg text-lg font-semibold transition-all ${
               selectedCategory === category
                 ? "bg-designColor text-black"
-                : " text-lightText border border-designColor"
+                : "text-lightText border border-designColor"
             }`}
           >
             {category}
           </button>
         ))}
       </div>
-
       {/* Portfolio items */}
       <div className="max-w-[1200px] mx-auto mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {portfolioToDisplay.map((project, index) => (
