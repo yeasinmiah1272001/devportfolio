@@ -15,7 +15,7 @@ const Skils = () => {
         </div>
 
         {/* Cart Section */}
-        <div className="grid lg:grid-cols-5 grid-cols-2 md:grid-cols-2 space-y-12 gap-7 lg:ml-8 mt-4">
+        <div className="grid lg:grid-cols-5 grid-cols-1 md:grid-cols-2 space-y-12 gap-7 lg:ml-8 mt-4">
           <article className="  border-white lg:w-48 lg:h-40 rounded-xl mt-12 relative max-w-xs overflow-hidden bg-cover bg-no-repeat hover:rotate-[5deg] duration-500 cursor-pointer">
             <div className=" bg-[#112240] font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2  lg:w-48 lg:h-40 shadow dark:bg-gray-800 ">
               <img
