@@ -6,7 +6,7 @@ import { IoLogoGithub } from "react-icons/io";
 
 const LeftSiteNavbar = () => {
   return (
-    <div className="fixed hidden md:block mt-32 px-8">
+    <div className="fixed hidden md:block mt-20 px-8">
       <ul className="space-y-6 ">
         <div className="border border-gray-500 px-2 py-2 rounded-full hover:border hover:border-designColor hover:text-designColor duration-500 cursor-pointer">
           <a href="https://github.com/yeasinmiah1272001">

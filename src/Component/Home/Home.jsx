@@ -11,20 +11,20 @@ import Skils from "../Skils/Skils";
 import Test from "../Test/Test";
 const Home = () => {
   return (
-    <main className="font-fontFamily min-h-screen overflow-hidden  text-lightText">
-      <Design />
+    <main className="font-fontFamily min-h-screen   text-lightText">
       <Header />
-
-      <Banner />
-      <About />
-      <Skils />
-      <Test />
-      <Projects />
-      <ScrollBar />
-      <OtherSection />
-
-      <Education />
-      <Email />
+      <div className=" overflow-hidden">
+        <Design />
+        <Banner />
+        <About />
+        <Skils />
+        <Test />
+        <Projects />
+        <ScrollBar />
+        <OtherSection />
+        <Education />
+        <Email />
+      </div>
     </main>
   );
 };

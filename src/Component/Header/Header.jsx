@@ -12,7 +12,6 @@ const navLink = [
   { title: "Skills", path: "skills", delay: 0.3 },
   { title: "Projects", path: "projects", delay: 0.4 },
   { title: "Education", path: "education", delay: 0.2 },
-
   { title: "Contact", path: "email", delay: 0.5 },
 ];
 
@@ -27,10 +26,10 @@ const Header = () => {
   };
 
   return (
-    <div className="h-20 shadow-lg overflow-hidden shadow-designColor/10 px-4 lg:px-20  fixed w-full top-0 z-30 bg-[#0A192F]">
+    <div className="h-20 sticky top-0 z-50 w-full  shadow-lg overflow-hidden shadow-designColor/10 px-4 lg:px-20  bg-[#0A192F]">
       <div className="max-w-[1440px] mx-auto flex items-center h-full justify-between">
         {/* Logo */}
-        <img src={logo} alt="logo" className="h-24 py-3 w-28 cursor-pointer" />
+        <img src={logo} alt="logo" className="h-12 w-12 cursor-pointer" />
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-7">
@@ -70,10 +69,7 @@ const Header = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <div
-          onClick={() => setShow(true)}
-          className="md:hidden w-6 h-5 flex flex-col justify-between items-center cursor-pointer group"
-        >
+        <div className="md:hidden w-8 h-6 flex flex-col justify-between items-center cursor-pointer group">
           <span className="w-full h-[2px] bg-designColor transition-transform duration-300" />
           <span className="w-full h-[2px] bg-designColor transition-transform duration-300" />
           <span className="w-full h-[2px] bg-designColor transition-transform duration-300" />
@@ -81,15 +77,13 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {show && (
-          <div
-            onClick={handleClickOutside}
-            className="absolute top-0 left-0 w-full h-screen bg-black/80 flex justify-end z-50"
-          >
+          <div className="absolute top-0  left-0 w-full h-screen bg-black/80 flex justify-end z-50">
             <motion.div
               initial={{ x: 250, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.3 }}
-              className="w-[250px] h-full bg-[#0A192F] flex flex-col items-center py-6 relative"
+              className="w-[75%] md:w-[250px] h-full bg-[#0A192F] flex flex-col items-center py-6 relative"
+              ref={ref}
             >
               <MdOutlineClose
                 onClick={() => setShow(false)}
