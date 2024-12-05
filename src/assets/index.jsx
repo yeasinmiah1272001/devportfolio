@@ -47,6 +47,7 @@ import supershop9 from "./image/full stack/supershop/9.png";
 import supershop10 from "./image/full stack/supershop/10.png";
 import supershop11 from "./image/full stack/supershop/11.png";
 import supershop12 from "./image/full stack/supershop/12.png";
+import perler from "./image/frontend/beauty parler.png";
 
 export {
   yeasin,
@@ -98,4 +99,5 @@ export {
   supershop10,
   supershop11,
   supershop12,
+  perler,
 };

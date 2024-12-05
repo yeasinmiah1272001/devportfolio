@@ -15,6 +15,7 @@ import {
   otherImg4,
   otherImg5,
   otherImg6,
+  perler,
 } from "../../assets";
 
 // Portfolio data with categories
@@ -22,7 +23,8 @@ const portfolioData = [
   {
     id: 1,
     title: "Portfolio",
-    link: "https://yeasinweb.vercel.app",
+    liveLink: "https://yeasinweb.vercel.app",
+    githubLink: "https://yeasinweb.vercel.app",
     description:
       "With supporting text below as a natural lead-in to additional content.",
     tech: [
@@ -39,7 +41,9 @@ const portfolioData = [
   {
     id: 2,
     title: "Store House",
-    link: "https://65929af45e2c05aed0fdfd40--legendary-taiyaki-a3fbb8.netlify.app/",
+    liveLink:
+      "https://65929af45e2c05aed0fdfd40--legendary-taiyaki-a3fbb8.netlify.app/",
+    githubLink: "",
     description:
       "With supporting text below as a natural lead-in to additional content.",
     tech: ["React.js", "React Scroll", "Framer motion", "Deisy ui"],
@@ -49,7 +53,8 @@ const portfolioData = [
   {
     id: 3,
     title: "LandingPage",
-    link: "https://react-landing-page-template-93ne.vercel.app/",
+    liveLink: "https://react-landing-page-template-93ne.vercel.app/",
+    githubLink: "",
     description:
       "With supporting text below as a natural lead-in to additional content.",
     tech: ["React.js", "React Scroll", "Framer motion", "Deisy ui", "emailjs"],
@@ -59,7 +64,8 @@ const portfolioData = [
   {
     id: 4,
     title: "Doctor Apponintment",
-    link: "https://romaletodiani.github.io/Hospital-Website/",
+    liveLink: "https://romaletodiani.github.io/Hospital-Website/",
+    githubLink: "",
     description:
       "With supporting text below as a natural lead-in to additional content.",
     tech: ["Next js", "React Scroll", "Framer motion", "Deisy ui", "emailjs"],
@@ -69,7 +75,8 @@ const portfolioData = [
   {
     id: 5,
     title: "Arc",
-    link: "https://hbsales.onrender.com/",
+    liveLink: "https://hbsales.onrender.com/",
+    githubLink: "",
     description:
       "With supporting text below as a natural lead-in to additional content.",
     tech: ["React Js", "React Scroll", "Framer motion", "Deisy ui", "emailjs"],
@@ -79,7 +86,8 @@ const portfolioData = [
   {
     id: 6,
     title: "Portfolio2",
-    link: "https://yeasinportfolio.vercel.app/",
+    liveLink: "https://yeasinportfolio.vercel.app/",
+    githubLink: "",
     description:
       "With supporting text below as a natural lead-in to additional content.",
     tech: [
@@ -94,9 +102,29 @@ const portfolioData = [
     img: otherImg6,
   },
   {
+    id: 9,
+    title: "Ecommarce-Shopping",
+    liveLink: "https://eid-shopping.vercel.app/",
+    githubLink: "",
+    description:
+      "With supporting text below as a natural lead-in to additional content.",
+    tech: [
+      "Next Js",
+      "Stript js",
+      "Next Auth",
+      "Redux Tolkit",
+      "Redux Persist",
+      "Framer motion",
+      "Marquee",
+    ],
+    category: "Frontend",
+    img: frontend2,
+  },
+  {
     id: 7,
     title: "Ecommarce-Shofy",
-    link: "https://shofyproject.vercel.app/",
+    liveLink: "https://shofyproject.vercel.app/",
+    githubLink: "",
     description:
       "With supporting text below as a natural lead-in to additional content.",
     tech: [
@@ -113,9 +141,10 @@ const portfolioData = [
     img: frontend1,
   },
   {
-    id: 8,
-    title: "Ecommarce-Shopping",
-    link: "eid-shopping.vercel.app",
+    id: 6,
+    title: "Perlour",
+    liveLink: "https://parlour-blush.vercel.app/",
+    githubLink: "https://github.com/yeasinmiah1272001/parlour",
     description:
       "With supporting text below as a natural lead-in to additional content.",
     tech: [
@@ -128,12 +157,13 @@ const portfolioData = [
       "Marquee",
     ],
     category: "Frontend",
-    img: frontend2,
+    img: perler,
   },
   {
     id: 9,
     title: "Ecommarce-Smartyt",
-    link: "https://e-commarce-smartyt.vercel.app",
+    liveLink: "https://e-commarce-smartyt.vercel.app",
+    githubLink: "",
     description:
       "With supporting text below as a natural lead-in to additional content.",
     tech: [
@@ -152,7 +182,8 @@ const portfolioData = [
   {
     id: 10,
     title: "Book-Store",
-    link: "https://book-client-five.vercel.app/",
+    liveLink: "https://book-client-five.vercel.app/",
+    githubLink: "",
     description:
       "With supporting text below as a natural lead-in to additional content.",
     tech: [
@@ -169,7 +200,8 @@ const portfolioData = [
   {
     id: 11,
     title: "Fashion-Ecommarce",
-    link: "https://fashion-client-iota.vercel.app",
+    liveLink: "https://fashion-client-iota.vercel.app",
+    githubLink: "",
     description:
       "With supporting text below as a natural lead-in to additional content.",
     tech: [
@@ -186,7 +218,8 @@ const portfolioData = [
   {
     id: 12,
     title: "Travel-Blog",
-    link: "travel-blog-eight-orpin.vercel.app",
+    liveLink: "travel-blog-eight-orpin.vercel.app",
+    githubLink: "",
     description:
       "With supporting text below as a natural lead-in to additional content.",
     tech: [
@@ -203,7 +236,8 @@ const portfolioData = [
   {
     id: 13,
     title: "Orabi-Ecommarce",
-    link: "",
+    liveLink: "",
+    githubLink: "",
     description:
       "With supporting text below as a natural lead-in to additional content.",
     tech: [
@@ -221,7 +255,8 @@ const portfolioData = [
   {
     id: 14,
     title: "Supper-shop",
-    link: "",
+    liveLink: "",
+    githubLink: "",
     description:
       "With supporting text below as a natural lead-in to additional content.",
     tech: [
@@ -239,7 +274,8 @@ const portfolioData = [
   {
     id: 15,
     title: "Ecommarce-Shofy",
-    link: "https://shofyproject.vercel.app/",
+    liveLink: "https://shofyproject.vercel.app/",
+    githubLink: "",
     description:
       "With supporting text below as a natural lead-in to additional content.",
     tech: [
@@ -258,7 +294,8 @@ const portfolioData = [
   {
     id: 8,
     title: "Ecommarce-Shopping",
-    link: "eid-shopping.vercel.app",
+    liveLink: "eid-shopping.vercel.app",
+    githubLink: "",
     description:
       "With supporting text below as a natural lead-in to additional content.",
     tech: [
