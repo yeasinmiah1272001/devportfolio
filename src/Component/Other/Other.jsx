@@ -377,7 +377,7 @@ const OtherSection = () => {
                 {project.tech.map((tech, techIndex) => (
                   <li
                     key={techIndex}
-                    className="bg-opacity-45 px-2 py-1 border border-gray-300 bg-transparent hover:bg-black hover:text-white rounded-md m-1 transition-transform transform hover:scale-110 hover:text-designColor"
+                    className="bg-opacity-45 px-2 py-1 border border-gray-300 bg-transparent hover:bg-black  rounded-md m-1 transition-transform transform hover:scale-110 hover:text-designColor"
                   >
                     {tech}
                   </li>
