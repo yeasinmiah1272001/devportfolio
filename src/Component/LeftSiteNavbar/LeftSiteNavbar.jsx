@@ -17,20 +17,25 @@ const LeftSiteNavbar = () => {
         </div>
 
         <div className="border border-gray-500  px-2 py-2 rounded-full hover:border hover:border-designColor hover:text-designColor duration-500 cursor-pointer">
-          <li>
-            <ImYoutube size={25} />{" "}
-          </li>
+          <a href="https://www.youtube.com/channel/UClFp4MVgiE0cPyO-pmtG73g">
+            <li>
+              <ImYoutube size={25} />{" "}
+            </li>
+          </a>
+        </div>
+        <div className="border border-gray-500  px-2 py-2 rounded-full hover:border hover:border-designColor hover:text-designColor duration-500 cursor-pointer">
+          <a href="https://www.linkedin.com/in/yeasin-miah-198b5829a/">
+            <li>
+              <FiLinkedin size={25} />
+            </li>
+          </a>
         </div>
         <div className="border border-gray-500  px-2 py-2 rounded-full hover:border hover:border-designColor hover:text-designColor duration-500 cursor-pointer">
           <li>
             <FaGoogle size={25} />
           </li>
         </div>
-        <div className="border border-gray-500  px-2 py-2 rounded-full hover:border hover:border-designColor hover:text-designColor duration-500 cursor-pointer">
-          <li>
-            <FiLinkedin size={25} />
-          </li>
-        </div>
+
         <div className="border border-gray-500  px-2 py-2 rounded-full hover:border hover:border-designColor hover:text-designColor duration-500 cursor-pointer">
           <li>
             <BsInstagram size={25} />{" "}
