@@ -48,6 +48,17 @@ import supershop10 from "./image/full stack/supershop/10.png";
 import supershop11 from "./image/full stack/supershop/11.png";
 import supershop12 from "./image/full stack/supershop/12.png";
 import perler from "./image/frontend/beauty parler.png";
+import tree1 from "./image/full stack/tree/1.png";
+import tree2 from "./image/full stack/tree/2.png";
+import tree3 from "./image/full stack/tree/3.png";
+import tree4 from "./image/full stack/tree/4.png";
+import tree5 from "./image/full stack/tree/5.png";
+import tree6 from "./image/full stack/tree/6.png";
+import tree7 from "./image/full stack/tree/7.png";
+import tree8 from "./image/full stack/tree/8.png";
+import tree9 from "./image/full stack/tree/9.png";
+import tree10 from "./image/full stack/tree/10.png";
+import tree11 from "./image/full stack/tree/11.png";
 
 export {
   yeasin,
@@ -100,4 +111,15 @@ export {
   supershop11,
   supershop12,
   perler,
+  tree1,
+  tree2,
+  tree3,
+  tree4,
+  tree5,
+  tree6,
+  tree7,
+  tree8,
+  tree9,
+  tree10,
+  tree11,
 };

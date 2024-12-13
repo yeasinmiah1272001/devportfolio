@@ -28,11 +28,76 @@ import {
   supershop7,
   supershop8,
   supershop9,
+  tree1,
+  tree10,
+  tree11,
+  tree2,
+  tree3,
+  tree4,
+  tree5,
+  tree6,
+  tree7,
+  tree8,
+  tree9,
 } from "../../assets";
 
 const projects = [
   {
+    id: 1,
+    name: "Amazon Tree Plantish",
+    description:
+      "Discover Amazon Tree Plantish, a modern e-commerce platform built with Next.js 15,Typescript, Redux Toolkit, NextAuth, Framer Motion, React Marquee, and Stripe for seamless payments. Perfect blend of functionality and stunning UI!",
+    images: [
+      tree1,
+      tree2,
+      tree3,
+      tree4,
+      tree5,
+      tree6,
+      tree7,
+      tree8,
+      tree9,
+      tree10,
+      tree11,
+    ],
+    ClientLiveLink: "https://tree-plantation.vercel.app",
+    ClientGitHubLink: "https://github.com/yeasinmiah1272001/Tree-Plantation",
+    technologies: ["Next.js", "TypeScript", "Redux", "Next Auth", "Stripe Js"],
+  },
+
+  {
     id: 2,
+    name: "E-Commarce-Orabi",
+    description:
+      "This project is built using Next.js and TypeScript along with several modern libraries and tools to enhance functionality and performance. It includes state management, UI components, animations, and integrations with third-party services like Stripe.",
+    images: [
+      orabiImg1,
+      orabiImg2,
+      orabiImg3,
+      orabiImg4,
+      orabiImg5,
+      orabiImg6,
+      orabiImg7,
+      orabiImg8,
+    ],
+    ClientLiveLink: "https://github.com/yeasinmiah1272001/orabi-client",
+    ClientGitHubLink: "https://github.com/yeasinmiah1272001/orabi-client",
+    ServerLiveLink: "https://github.com/yeasinmiah1272001/orabi-server",
+    ServerGitHubLink: "https://github.com/yeasinmiah1272001/orabi-server",
+    technologies: [
+      "React.Js",
+      "Mongoose",
+      "Express Js",
+      "Node Js",
+      "Redux",
+      "Stripe Js",
+      "Marquee",
+      "Pie Chart",
+    ],
+  },
+
+  {
+    id: 3,
     name: "Ecommerce-Supper-Shop",
     description:
       "This project is built using Next.js and TypeScript along with several modern libraries and tools to enhance functionality and performance. It includes state management, UI components, animations, and integrations with third-party services like Stripe.",
@@ -67,39 +132,9 @@ const projects = [
       "Pie Chart",
     ],
   },
-  {
-    id: 2,
-    name: "E-Commarce-Orabi",
-    description:
-      "This project is built using Next.js and TypeScript along with several modern libraries and tools to enhance functionality and performance. It includes state management, UI components, animations, and integrations with third-party services like Stripe.",
-    images: [
-      orabiImg1,
-      orabiImg2,
-      orabiImg3,
-      orabiImg4,
-      orabiImg5,
-      orabiImg6,
-      orabiImg7,
-      orabiImg8,
-    ],
-    ClientLiveLink: "https://github.com/yeasinmiah1272001/orabi-client",
-    ClientGitHubLink: "https://github.com/yeasinmiah1272001/orabi-client",
-    ServerLiveLink: "https://github.com/yeasinmiah1272001/orabi-server",
-    ServerGitHubLink: "https://github.com/yeasinmiah1272001/orabi-server",
-    technologies: [
-      "React.Js",
-      "Mongoose",
-      "Express Js",
-      "Node Js",
-      "Redux",
-      "Stripe Js",
-      "Marquee",
-      "Pie Chart",
-    ],
-  },
 
   {
-    id: 3,
+    id: 4,
     name: "E-commerce-shofy",
     description:
       "This project is built using Next.js and TypeScript along with several modern libraries and tools to enhance functionality and performance. It includes state management, UI components, animations, and integrations with third-party services like Stripe.",
@@ -108,16 +143,6 @@ const projects = [
     ClientGitHubLink:
       "https://github.com/yeasinmiah1272001/shofy-practice-main",
     technologies: ["Next.js", "TypeScript", "Redux", "Next Auth", "Stripe Js"],
-  },
-  {
-    id: 4,
-    name: "Shopping",
-    description: "This project showcases my skills in React and Tailwind CSS.",
-    images: [ShofyImg1, ShofyImg2, ShofyImg3, ShofyImg4, ShofyImg5],
-    ClientLiveLink: "https://eid-shopping.vercel.app/",
-    ClientGitHubLink:
-      "https://github.com/yeasinmiah1272001/shofy-practice-main",
-    technologies: ["React", "Tailwind CSS", "Redux", "Next Auth"],
   },
 ];
 
