@@ -148,8 +148,8 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className=" py-5 bg-[#0A192F]">
-      <div className="container mx-auto px-4">
+    <section id="projects" className=" py-5 lg:mx-28  bg-[#0A192F]">
+      <div className="container mx-auto ">
         {/* Section Title */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-designColor">My Projects</h1>
