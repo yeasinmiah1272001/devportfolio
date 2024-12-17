@@ -80,9 +80,9 @@ const projects = [
       orabiImg7,
       orabiImg8,
     ],
-    ClientLiveLink: "https://github.com/yeasinmiah1272001/orabi-client",
+    ClientLiveLink: "https://orebishopping.vercel.app/",
     ClientGitHubLink: "https://github.com/yeasinmiah1272001/orabi-client",
-    ServerLiveLink: "https://github.com/yeasinmiah1272001/orabi-server",
+    ServerLiveLink: "https://orebishopping.vercel.app",
     ServerGitHubLink: "https://github.com/yeasinmiah1272001/orabi-server",
     technologies: [
       "React.Js",
@@ -94,6 +94,17 @@ const projects = [
       "Marquee",
       "Pie Chart",
     ],
+  },
+  {
+    id: 4,
+    name: "E-commerce-shofy",
+    description:
+      "This project is built using Next.js and TypeScript along with several modern libraries and tools to enhance functionality and performance. It includes state management, UI components, animations, and integrations with third-party services like Stripe.",
+    images: [ShofyImg1, ShofyImg2, ShofyImg3, ShofyImg4, ShofyImg5],
+    ClientLiveLink: "https://shofyproject.vercel.app/",
+    ClientGitHubLink:
+      "https://github.com/yeasinmiah1272001/shofy-practice-main",
+    technologies: ["Next.js", "TypeScript", "Redux", "Next Auth", "Stripe Js"],
   },
 
   {
@@ -131,18 +142,6 @@ const projects = [
       "Marquee",
       "Pie Chart",
     ],
-  },
-
-  {
-    id: 4,
-    name: "E-commerce-shofy",
-    description:
-      "This project is built using Next.js and TypeScript along with several modern libraries and tools to enhance functionality and performance. It includes state management, UI components, animations, and integrations with third-party services like Stripe.",
-    images: [ShofyImg1, ShofyImg2, ShofyImg3, ShofyImg4, ShofyImg5],
-    ClientLiveLink: "https://shofyproject.vercel.app/",
-    ClientGitHubLink:
-      "https://github.com/yeasinmiah1272001/shofy-practice-main",
-    technologies: ["Next.js", "TypeScript", "Redux", "Next Auth", "Stripe Js"],
   },
 ];
 
